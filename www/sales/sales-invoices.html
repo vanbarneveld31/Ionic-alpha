@@ -1,0 +1,22 @@
+<ion-view title="Sales Invoices" ng-controller="SalesCtrl as vm">
+  <ion-content>
+	<ion-refresher on-refresh="refresh()"></ion-refresher>
+	<div data-ng-show="!invoices.length">
+		<center>Pull to Refresh</center>
+	</div>
+	<div class="list">
+	  <div ng-repeat="salesinvoice in invoices" class="card">
+		<div class="item">
+			<span class="bold"> {{salesinvoice.OrderNumber}} - {{salesinvoice.InvoiceToName}} 
+				<a class="item item-text-wrap item-icon-right" ng-href="#/sales/{{salesinvoice.InvoiceID}}">
+					<i class="icon ion-chevron-right icon-accessory"></i>
+				</a>
+			</span>
+			<div class="item item-divider">
+            Amount: {{salesinvoice.AmountDC}}
+        </div>
+		</div>
+	  </div>
+	</div>
+  </ion-content>
+</ion-view>

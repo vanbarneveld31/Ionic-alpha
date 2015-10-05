@@ -1,0 +1,30 @@
+<ion-view title="Settings" ng-controller="NotificationCtrl as vm">
+  <ion-content>
+	<div class="list card">
+      <div class="item item-divider">Account</div>
+      <div class="item item-body">
+        <ion-toggle ng-model="settings.autoLogin">
+			Auto-Login
+		</ion-toggle>
+		<a class="item item-icon-left" href="#">
+			Division
+			<i class="icon ion-gear-a"></i>
+			<span class="item-note">
+			  2266
+			</span>
+	    </a>
+      </div>
+    </div>
+	<div class="list card">
+      <div class="item item-divider">Notifications</div>
+      <div class="item item-body">
+        <ion-toggle ng-model="settings.sales">
+			Sales 
+		</ion-toggle>
+		<ion-toggle ng-model="settings.revenue">
+			Daily revenue
+		</ion-toggle>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
